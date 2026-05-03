@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>William Kariuki — Full-Stack Developer</title>
   <meta name="description" content="William Kariuki (Havertz) — Full-stack developer, IT support professional & cybersecurity enthusiast." />
+
+  <!-- OG / Social Preview Tags -->
+  <meta property="og:title" content="William Kariuki — Full-Stack Developer" />
+  <meta property="og:description" content="Full-stack developer, IT specialist & cybersecurity enthusiast building fast, scalable, and secure digital solutions." />
+  <meta property="og:image" content="https://havertz69.github.io/bio/public/images/img2.jpg" />
+  <meta property="og:url" content="https://havertz69.github.io/bio/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="William Kariuki — Full-Stack Developer" />
+  <meta name="twitter:description" content="Full-stack developer, IT specialist & cybersecurity enthusiast." />
+  <meta name="twitter:image" content="https://havertz69.github.io/bio/public/images/img2.jpg" />
+
   <link rel="icon" href="public/images/img2.jpg" type="image/x-icon">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +39,8 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="status-badge">
+      <!-- FIX: aria-hidden since hero already has this badge -->
+      <div class="status-badge" aria-hidden="true">
         <div class="dot"></div>
         Available for hire
       </div>
@@ -38,15 +51,15 @@
     </div>
   </nav>
 
-  <main>
-
-  <!-- Mobile Menu -->
+  <!-- Mobile Menu — FIX: moved outside <main> since it's an overlay, not main content -->
   <div class="mobile-menu" id="mobile-menu">
     <a href="#about" class="mobile-link">About</a>
     <a href="#skills" class="mobile-link">Skills</a>
     <a href="#projects" class="mobile-link">Projects</a>
     <a href="#contact" class="mobile-link">Contact</a>
   </div>
+
+  <main>
 
   <!-- Hero Section -->
   <section class="section hero" id="home">
@@ -65,21 +78,23 @@
 
       <p class="hero-desc">
         From web apps and mobile interfaces to network infrastructure and CCTV systems 
-        -- I turn real-world problems into elegant tech solutions.
+        — I turn real-world problems into elegant tech solutions.
       </p>
       <div class="hero-buttons">
         <a href="#projects" class="btn btn-primary">View My Work</a>
-        <a href="public/William%20CV.pdf" download class="btn btn-secondary">Download CV</a>
+        <!-- FIX: renamed file path (rename the actual file to match) -->
+        <a href="public/william-kariuki-cv.pdf" download class="btn btn-secondary">Download CV</a>
       </div>
       <div class="social-icons" style="margin-top: 0;">
-        <a href="https://github.com/Havertz69" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/william-kariuki-48613229b/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://www.instagram.com/havertz69_" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <!-- FIX: added rel="noopener noreferrer" to all external links -->
+        <a href="https://github.com/Havertz69" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/william-kariuki-48613229b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/havertz69_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
       </div>
     </div>
     <div class="hero-image reveal">
       <div class="profile-glow"></div>
-      <img src="public/images/img2.jpg" alt="William Kariuki" class="profile-img">
+      <img src="public/images/img2.jpg" alt="William Kariuki, Full-Stack Developer" class="profile-img">
     </div>
   </section>
 
@@ -105,10 +120,10 @@
     <div class="skills-container">
       
       <div class="skill-category reveal">
+        <!-- FIX: removed Python from Frontend — it belongs in Backend only -->
         <h3><i class="fa-solid fa-layer-group"></i> Frontend</h3>
         <div class="badge-grid">
           <span class="skill-badge"><i class="fa-brands fa-react"></i> React</span>
-          <span class="skill-badge"><i class="fa-brands fa-python"></i> Python</span>
           <span class="skill-badge"><i class="fa-brands fa-css3-alt"></i> CSS</span>
           <span class="skill-badge"><i class="fa-brands fa-html5"></i> HTML</span>
           <span class="skill-badge"><i class="fa-solid fa-code"></i> MUI</span>
@@ -169,7 +184,7 @@
       <!-- HaviMart -->
       <article class="project-card reveal">
         <div class="project-banner">
-          <img src="public/images/havimart_mockup.png" alt="HaviMart Mockup" class="project-img">
+          <img src="public/images/havimart_mockup.png" alt="HaviMart e-commerce store mockup" class="project-img">
         </div>
         <div class="project-content">
           <h3 class="project-title">HaviMart</h3>
@@ -181,7 +196,7 @@
             <span class="tech-pill">Stripe</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/Havertz69/havimart" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
+            <a href="https://github.com/Havertz69/havimart" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
             <div class="tooltip-container">
               <span class="project-link disabled"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</span>
               <span class="tooltip">Coming soon</span>
@@ -193,7 +208,7 @@
       <!-- BlogIt -->
       <article class="project-card reveal">
         <div class="project-banner">
-          <img src="public/images/blogit_mockup.png" alt="BlogIt Mockup" class="project-img">
+          <img src="public/images/blogit_mockup.png" alt="BlogIt blogging platform mockup" class="project-img">
         </div>
         <div class="project-content">
           <h3 class="project-title">BlogIt</h3>
@@ -204,7 +219,8 @@
             <span class="tech-pill">Cloud</span>
           </div>
           <div class="project-links">
-            <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
+            <!-- FIX: points to GitHub profile instead of dead # -->
+            <a href="https://github.com/Havertz69" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
             <div class="tooltip-container">
               <span class="project-link disabled"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</span>
               <span class="tooltip">Coming soon</span>
@@ -213,10 +229,10 @@
         </div>
       </article>
 
-      <!-- Rental -->
+      <!-- Property Pulse -->
       <article class="project-card reveal">
         <div class="project-banner">
-          <img src="public/images/property_pulse_mockup.png" alt="Property Pulse Mockup" class="project-img">
+          <img src="public/images/property_pulse_mockup.png" alt="Property Pulse rental marketplace mockup" class="project-img">
         </div>
         <div class="project-content">
           <h3 class="project-title">Property Pulse</h3>
@@ -227,7 +243,7 @@
             <span class="tech-pill">Postgres</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/Havertz69" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
+            <a href="https://github.com/Havertz69" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
             <div class="tooltip-container">
               <span class="project-link disabled"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</span>
               <span class="tooltip">Coming soon</span>
@@ -248,7 +264,8 @@
             <span class="tech-pill">UX Research</span>
           </div>
           <div class="project-links">
-            <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
+            <!-- FIX: points to GitHub profile instead of dead # -->
+            <a href="https://github.com/Havertz69" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
             <div class="tooltip-container">
               <span class="project-link disabled"><i class="fa-solid fa-arrow-up-right-from-square"></i> Prototype</span>
               <span class="tooltip">Coming soon</span>
@@ -269,7 +286,7 @@
             <span class="tech-pill">JS</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/Havertz69/sarova" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
+            <a href="https://github.com/Havertz69/sarova" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
             <div class="tooltip-container">
               <span class="project-link disabled"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</span>
               <span class="tooltip">Coming soon</span>
@@ -290,7 +307,8 @@
             <span class="tech-pill">Tailwind</span>
           </div>
           <div class="project-links">
-            <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
+            <!-- FIX: points to GitHub profile instead of dead # -->
+            <a href="https://github.com/Havertz69" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
             <div class="tooltip-container">
               <span class="project-link disabled"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</span>
               <span class="tooltip">Coming soon</span>
@@ -306,7 +324,7 @@
   <section class="section testimonials" id="testimonials">
     <h2 class="section-title reveal">What People Say</h2>
     <div class="testimonials-grid">
-      <!-- Replace with real quotes from clients or lecturers -->
+
       <div class="testimonial-card reveal">
         <i class="fa-solid fa-quote-right quote-icon"></i>
         <p class="testimonial-text">
@@ -327,7 +345,8 @@
           "Working with Havertz was seamless. He delivered an excellent e-commerce solution for our business that was secure, fast, and easy to manage. Highly recommend his development services!"
         </p>
         <div class="testimonial-author">
-          <div class="author-avatar">S</div>
+          <!-- FIX: avatar initial changed from S to N to match "Njiru A" -->
+          <div class="author-avatar">N</div>
           <div class="author-info">
             <h4>Njiru A</h4>
             <span>Emoji Tech Owner</span>
@@ -345,7 +364,7 @@
       
       <div class="contact-info">
         <h3>Get In Touch</h3>
-        <p>Ready to build something together? I’m available for freelance, internship, and full-time opportunities.</p>
+        <p>Ready to build something together? I'm available for freelance, internship, and full-time opportunities.</p>
         
         <div class="contact-items">
           <div class="contact-item">
@@ -354,7 +373,8 @@
           </div>
           <div class="contact-item">
             <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
-            <a href="https://wa.me/254769674727" target="_blank">+254 790 818 647</a>
+            <!-- FIX: display text now matches the WhatsApp number (update whichever is wrong) -->
+            <a href="https://wa.me/254769674727" target="_blank" rel="noopener noreferrer">+254 769 674 727</a>
           </div>
           <div class="contact-item">
             <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
@@ -363,13 +383,12 @@
         </div>
 
         <div class="social-icons">
-          <a href="https://www.linkedin.com/in/william-kariuki-48613229b/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://www.instagram.com/havertz69_" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://github.com/Havertz69" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/william-kariuki-48613229b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/havertz69_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://github.com/Havertz69" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
         </div>
       </div>
 
-      <!-- Sign up at emailjs.com -->
       <form class="contact-form" id="contactForm">
         <div class="form-group">
           <label for="name">Your Name</label>
@@ -390,9 +409,9 @@
   </section>
 
   <!-- Project Modal -->
-  <div class="project-modal" id="project-modal">
+  <div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal-content">
-      <span class="close-modal" id="close-modal">&times;</span>
+      <span class="close-modal" id="close-modal" role="button" aria-label="Close modal">&times;</span>
       <div class="modal-body">
         <h3 id="modal-title">Project Title</h3>
         <p id="modal-desc">Detailed project description goes here.</p>
@@ -402,13 +421,16 @@
     </div>
   </div>
 
+  </main>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-socials">
-      <a href="https://github.com/Havertz69" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/william-kariuki-48613229b/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="https://www.instagram.com/havertz69_" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://github.com/Havertz69" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/william-kariuki-48613229b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://www.instagram.com/havertz69_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
     </div>
+    <!-- FIX: year is dynamically set via JS -->
     <p>&copy; <span id="year"></span> William Kariuki. Crafted with passion and precision.</p>
     <p class="hiring-text">Currently available for hire.</p>
   </footer>
@@ -432,22 +454,13 @@
       body.classList.toggle('light-mode');
       const isLight = body.classList.contains('light-mode');
       localStorage.setItem('theme', isLight ? 'light' : 'dark');
-      
-      if (isLight) {
-        icon.classList.replace('fa-moon', 'fa-sun');
-      } else {
-        icon.classList.replace('fa-sun', 'fa-moon');
-      }
+      icon.classList.replace(isLight ? 'fa-moon' : 'fa-sun', isLight ? 'fa-sun' : 'fa-moon');
     });
 
     // Sticky Navbar
     window.addEventListener('scroll', () => {
       const navbar = document.getElementById('navbar');
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
     });
 
     // Mobile Menu Toggle
@@ -473,31 +486,33 @@
       });
     });
 
-    // Custom Cursor
-    const cursor = document.createElement('div');
-    cursor.className = 'custom-cursor';
-    const cursorDot = document.createElement('div');
-    cursorDot.className = 'cursor-dot';
-    document.body.appendChild(cursor);
-    document.body.appendChild(cursorDot);
+    // Custom Cursor — desktop only
+    if (window.matchMedia('(pointer: fine)').matches) {
+      const cursor = document.createElement('div');
+      cursor.className = 'custom-cursor';
+      const cursorDot = document.createElement('div');
+      cursorDot.className = 'cursor-dot';
+      document.body.appendChild(cursor);
+      document.body.appendChild(cursorDot);
 
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-      cursorDot.style.left = e.clientX + 'px';
-      cursorDot.style.top = e.clientY + 'px';
-    });
+      document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+        cursorDot.style.left = e.clientX + 'px';
+        cursorDot.style.top = e.clientY + 'px';
+      });
 
-    document.querySelectorAll('a, button, .project-card').forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        cursor.classList.add('cursor-hover');
-        cursorDot.classList.add('dot-hover');
+      document.querySelectorAll('a, button, .project-card').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          cursor.classList.add('cursor-hover');
+          cursorDot.classList.add('dot-hover');
+        });
+        el.addEventListener('mouseleave', () => {
+          cursor.classList.remove('cursor-hover');
+          cursorDot.classList.remove('dot-hover');
+        });
       });
-      el.addEventListener('mouseleave', () => {
-        cursor.classList.remove('cursor-hover');
-        cursorDot.classList.remove('dot-hover');
-      });
-    });
+    }
 
     // Project Modals
     const modal = document.getElementById('project-modal');
@@ -508,7 +523,6 @@
 
     document.querySelectorAll('.project-card').forEach(card => {
       card.addEventListener('click', (e) => {
-        // Prevent modal if clicking a direct link
         if (e.target.closest('.project-link')) return;
 
         const title = card.querySelector('.project-title').textContent;
@@ -522,7 +536,7 @@
         modalLinks.innerHTML = links;
 
         modal.style.display = 'flex';
-        body.style.overflow = 'hidden'; // Prevent scroll
+        body.style.overflow = 'hidden';
       });
     });
 
@@ -532,8 +546,15 @@
     };
 
     closeModal.addEventListener('click', closeProjectModal);
-    window.addEventListener('click', (e) => {
+
+    // Close modal on backdrop click
+    modal.addEventListener('click', (e) => {
       if (e.target === modal) closeProjectModal();
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.style.display === 'flex') closeProjectModal();
     });
 
     // Active Section Highlighting & Scroll Reveal
@@ -563,6 +584,13 @@
     sections.forEach(section => observer.observe(section));
     revealElements.forEach(el => observer.observe(el));
 
+    // Trigger reveal for elements already in view on load
+    revealElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        el.classList.add('active');
+      }
+    });
 
     // Typing Animation
     const words = ["Full-Stack Developer", "IT Specialist", "Cybersecurity Enthusiast", "Problem Solver"];
@@ -585,37 +613,29 @@
       let typeSpeed = isDeleting ? 50 : 100;
 
       if (!isDeleting && charIndex === currentWord.length) {
-        typeSpeed = 2000; // Pause at end of word
+        typeSpeed = 2000;
         isDeleting = true;
       } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         wordIndex = (wordIndex + 1) % words.length;
-        typeSpeed = 500; // Pause before new word
+        typeSpeed = 500;
       }
 
       setTimeout(typeEffect, typeSpeed);
     }
 
-    // Start typing animation
-    document.addEventListener("DOMContentLoaded", () => {
-      setTimeout(typeEffect, 1000);
-      revealElements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight) {
-          el.classList.add('active');
-        }
-      });
-    });
+    // Start typing after a short delay (scripts are at bottom so DOM is ready)
+    setTimeout(typeEffect, 1000);
   </script>
 
-  <!-- EmailJS Script -->
+  <!-- EmailJS -->
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
     (function() {
       try { 
         emailjs.init("BT5I1j7sycjng0jzD"); 
       } catch (err) { 
-        console.warn(err); 
+        console.warn('EmailJS init failed:', err); 
       }
       
       const form = document.getElementById("contactForm");
@@ -629,16 +649,16 @@
           
           emailjs.sendForm("emails", "template_q262bxm", this)
             .then(() => { 
-                alert("✅ Message sent successfully!"); 
-                form.reset(); 
-                submitBtn.innerText = "Send Message"; 
-                submitBtn.disabled = false; 
+              alert("✅ Message sent successfully!");
+              form.reset();
+              submitBtn.innerText = "Send Message";
+              submitBtn.disabled = false;
             })
             .catch((error) => { 
-                alert("❌ Failed to send message."); 
-                console.error(error); 
-                submitBtn.innerText = "Send Message"; 
-                submitBtn.disabled = false; 
+              alert("❌ Failed to send message. Please try emailing directly at williamkariuki001@gmail.com");
+              console.error('EmailJS error:', error);
+              submitBtn.innerText = "Send Message";
+              submitBtn.disabled = false;
             });
         });
       }
